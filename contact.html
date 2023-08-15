@@ -1,0 +1,305 @@
+<html>
+
+<head>
+	<title>Contact Me</title>
+	<meta charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+	<style>
+		body {
+			background: #EDE6D6;
+			font-size:16px;
+			font-family: 'Poppins';
+
+		}
+
+		.header {
+			padding: 30px 0;
+			background: #f5f5f5;
+			border-top:10px solid #78BC71;
+			display:flex;
+			width:50%;
+			justify-content:center;
+			margin:auto;
+		}
+
+		.header .main-image {
+			padding-left:50px;
+			width:15%;
+			float:left;
+			border-radius:50%;
+
+		}
+
+		.header .profile .name {
+			color: #000;
+			font-size:40px;
+			margin-bottom:5px;
+			margin-top:30px;
+			float:left;
+			padding-left:30px;
+			font-family: 'Playfair Display';
+		}
+
+		.header .profile .title {
+			color:#FCD733;
+			font-size:19px;
+			margin-top: 0;
+			margin-bottom:15px;
+			width:40%;
+			text-align:right;
+			padding-left: 190px;
+
+		}
+
+		nav ul li {
+			list-style-type:none;
+			float:right;
+			padding-right:50px;
+			font-size:15px;
+
+			
+	
+		}
+
+	
+		nav a {
+			text-decoration: none;
+			list-style-type: none;
+			color: #78BC71;
+
+
+
+		}	
+
+		nav a:hover {
+			background-color:#EDE6D6;
+		}
+
+		nav li {
+			display:inline;
+			position:relative;
+
+
+		}
+
+		nav ul ul {
+			position:absolute;
+			display:none;
+			background: white;
+			width:140px;
+		}
+
+		li:hover > ul {
+			display:block;
+			background-color: #f5f5f5;
+		}
+
+		h1, h2  {
+
+			font-family: 'Poppins';
+			color: #000;
+
+		}
+
+
+
+		.divider {
+			width:70%;
+			margin-bottom:40px;
+
+
+		}
+
+		.posts {
+			background: #fff;
+			margin:auto;
+			width:50%;
+			border-bottom:10px solid #78BC71;
+		}
+
+		.posts .recent {
+			text-align:center;
+			padding:30px;
+			font-size:30px;
+			background: #f5f5f5;
+			border-bottom:10px solid #78BC71;
+			font-family: 'Playfair Display';
+			text-decoration: underline;
+		}
+
+		.posts .content {
+			display: block;
+			margin:auto;
+
+		}
+
+		#content h3 {
+			text-align:center;
+			color:#78BC71;
+		}
+
+	
+
+		#form {
+			color:#000;
+			background-color:#f5f5f5;
+			width:70%;
+			margin:auto;
+			text-align:center;
+			padding:20px;
+		
+
+		}
+
+		input[type=submit] {
+   			background-color:#FCD733;
+   			color: white;
+   			border:none;
+   			padding:12px 28px;
+		}
+
+		input[type=submit]:hover {
+			background-color:#78BC71;
+		}
+
+
+	</style>	
+
+
+<script type="text/javascript">
+				function validate () {
+					if(document.contact.name.value=="") {
+					alert("Please enter your name!");
+					document.contact.name.focus();
+					return false
+					}
+
+					if(document.contact.email.value=="") {
+					alert("Please enter your email!");
+					document.contact.email.focus();
+					return false
+					}	
+
+					if(document.contact.subject.value=="") {
+					alert("Please enter a subject!");
+					document.contact.subject.focus();
+					return false
+					}	
+
+					if(document.contact.message.value=="") {
+					alert("Please enter a subject!");
+					document.contact.message.focus();
+					return false
+					}	
+
+					return (true);
+				}
+			</script>
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<img class="main-image" src="file:///Users/taajablackburn/Desktop/html:css/big%20project/IMG_3174.jpeg" alt="me"/>
+			<div class="profile">
+				<h1 class="name">Taaja Blackburn</h1>
+				<h2 class="title">Aspiring Youth Librarian</h2>
+				<nav>
+					<ul>
+						<li><a href="#">ABOUT &#10136;</a>
+								<ul>
+									<li><a href="about.html">about taaja</a></li>
+									<li><a href="faq.html">faq</a></li>
+									<li><a href="contact.html">contact me</a></li>
+								</ul>	
+						</li>
+						<li><a href="recs.html">RECS</a></li>
+						<li><a href="main page.html">HOME</a></li>
+					</ul>
+				</nav>	
+			</div>	
+
+		</div>
+	</header>		
+
+
+<div class="posts">
+		<h2 class="recent">Contact Me<br><br>
+			<img class ="contact" src="file:///Users/taajablackburn/Desktop/html:css/big%20project/IMG_3272.png" width="50%" style="border:5px solid #FCD733; margin-top:-20px;"/>
+		</h2>
+			
+		<div id="content">
+
+			<h3>Have questions or wanna chat?</h3>
+			<p><center>You can reach me through here or directly at <b>taajablack@gmail.com</b></center></p>	
+		</div>	
+
+	<hr class="divider" />
+
+	<form name="contact" method="post" action="thankyou.html" onsubmit="return(validate());">
+
+			<div id="form">
+				<h4 style="color:#FCD733;">Please complete the following form. Replies can take up to 5 to 7 business days. Thank you!</h4>
+				<p>Note: * indicates required field.</p>
+
+			
+				<div>
+					<input type="text" name="name" placeholder="name*">
+					<input type="text" name="email" placeholder="email*">
+				</div>	
+
+				<br>
+
+				<div>
+					<input type="text" name="subject" placeholder="subject*" style="width:250px">
+				</div>	
+
+				<br>
+
+				<div>
+					<label for="topic">What's the topic of your message?</label><br>
+					<input type="radio" name="topic">Book review
+					<input type="radio" name="topic">Question
+					<input type="radio" name="topic">Other
+
+				</div>	
+
+				<br>
+				<hr>
+				<br>
+
+				<div>
+					<label for="message" name="message">*Please write your message here:</label>
+					<textarea name="text" cols="40" rows="10" style="font-family:arial;"></textarea>
+				</div>	
+
+				<br>
+
+				<div>
+				<select class="selectoptions">
+					<option value="country">Where are you from?</option>
+					<option value="country">USA</option>
+					<option value="country">Canada</option>
+					<option value="country">United Kingdom/Ireland</option>
+					<option value="country">Other</option>
+				</select>
+				</div>	
+
+				<br>
+
+				<div>
+					<input type="submit" value="SUBMIT">
+
+				</div>	
+	
+
+	</form>		
+</div>
+	
+	
+
+</body>
+</html>
